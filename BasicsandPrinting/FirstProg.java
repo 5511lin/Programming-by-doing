@@ -1,4 +1,3 @@
-//Basics and Printing An important message 5 points Julian Lin
 public class FirstProg
 {
 	public static void main( String[] args )

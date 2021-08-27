@@ -1,4 +1,3 @@
-//Basics and Printing Comments and Slashes 3 points Julian Lin
 //Julian Lin 8/24/2021
 //Yes, the two slashes signifies a comment.
 public class CommentsAndSlashes

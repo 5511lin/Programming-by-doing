@@ -1,4 +1,3 @@
-//Basics and Printing A letter to yourself 7 points Julian Lin
 public class LetterToYourself {
 
     public static void main(String[] args) {
