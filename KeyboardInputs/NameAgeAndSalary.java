@@ -7,18 +7,18 @@ import java.util.Scanner;
 
             Scanner keyboard = new Scanner(System.in);
             int age;
-            double n2;
-            String name1;
+            double salary;
+            String name;
             System.out.println("Hello.   What is your name?");
-            name1 = keyboard.next();
+            name = keyboard.next();
             System.out.println("");
-            System.out.println("Hi, " + name1 + "!   How old are you?");
+            System.out.println("Hi, " + name + "!   How old are you?");
             age = keyboard.nextInt();
             System.out.println("");
             System.out.println("So you're " + age + ", eh?   That's not old at all!");
-            System.out.println("How much do you make, " + name1 + "?");
-            n2 = keyboard.nextDouble();
+            System.out.println("How much do you make, " + name + "?");
+            salary = keyboard.nextDouble();
             System.out.println("");
-            System.out.println("" + n2 + "!   I hope that's per hour and not per year! LOL!");
+            System.out.println("" + salary + "!   I hope that's per hour and not per year! LOL!");
           }
       }

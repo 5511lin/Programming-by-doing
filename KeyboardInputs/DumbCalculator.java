@@ -7,20 +7,20 @@ import java.util.Scanner;
 
             Scanner keyboard = new Scanner(System.in);
 
-            Double n1, n2, n3, n4;
+            Double firstnumber, secondnumber, thirdnumber, averagenumber;
 
             System.out.print( "What is your first number? " );
-            n1 = keyboard.nextDouble();
+            firstnumber = keyboard.nextDouble();
 
             System.out.print( "What is your second number? " );
-            n2 = keyboard.nextDouble();
+            secondnumber = keyboard.nextDouble();
 
             System.out.print( "What is your third number? " );
-            n3 = keyboard.nextDouble();
+            thirdnumber = keyboard.nextDouble();
 
-            n4 = (n1+n2+n3) / 2;
+            averagenumber = (firstnumber+secondnumber+thirdnumber) / 2;
 
-            System.out.println( "\n( " + n1 + " + " + n2 + " + " + n3 + " ) / 2 is... " + n4 );
+            System.out.println( "\n( " + firstnumber + " + " + secondnumber + " + " + thirdnumber + " ) / 2 is... " + averagenumber );
 
         }
     }
