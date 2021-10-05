@@ -8,11 +8,11 @@ public class Blackjack
 
       Scanner keyboard = new Scanner(System.in);
       Random r = new Random();
-      int n1 = 2+ r.nextInt(11);
-      int n2 = 2+ r.nextInt(11);
+      int n1 = 2+ r.nextInt(9);
+      int n2 = 2+ r.nextInt(9);
       int total = n1+n2;
-      int dealer1 = 2+ r.nextInt(11);
-      int hiddencard= 2+ r.nextInt(11);
+      int dealer1 = 2+ r.nextInt(9);
+      int hiddencard= 2+ r.nextInt(9);
       int total1 = dealer1 + hiddencard;
 
       System.out.println("Welcome to Julian's blackjack program!");
@@ -29,7 +29,7 @@ public class Blackjack
       String decision1 = keyboard.next();
       if (decision1.equalsIgnoreCase("hit"))
       {
-        n1 = 2+r.nextInt(11);
+        n1 = 2+r.nextInt(9);
         System.out.println("You drew a " + n1 + ".");
         total = total + n1;
         System.out.println("Your total is " + total + ".");
@@ -53,7 +53,7 @@ public class Blackjack
       while (total1<=15)
       {
         System.out.println("Dealer chooses to hit.");
-        dealer1 = 2+r.nextInt(11);
+        dealer1 = 2+r.nextInt(9);
         System.out.println("He draws a " + dealer1 + ".");
         total1 = total1 + dealer1;
         System.out.println("His total is " + total1 + ".");
