@@ -1,16 +1,19 @@
-public class LetterToYourself {
-
-    public static void main(String[] args) {
-        System.out.println("+---------------------------------------------------------+");
-        System.out.println("|                                                    #### |");
-        System.out.println("|                                                    #### |");
-        System.out.println("|                                                    #### |");
-        System.out.println("|                                                         |");
-        System.out.println("|                                                         |");
-        System.out.println("|                              Bill Gates                 |");
-        System.out.println("|                              1 Microsoft Way            |");
-        System.out.println("|                              Redmond, WA 98104          |");
-        System.out.println("|                                                         |");
-        System.out.println("+---------------------------------------------------------+");
-    }
+import java.io.*;
+public class LetterRevisited{
+	public static void main(String args[]) throws IOException{
+	File letter = new File("letter.txt");
+	FileWriter fw =new FileWriter(letter);
+	PrintWriter pw = new PrintWriter(fw);
+		pw.println("+--------------------------------------------------------------+");
+		pw.println("|                                                         #### |");
+		pw.println("|                                                         #### |");
+		pw.println("|                                                         #### |");
+		pw.println("|                                                              |");
+		pw.println("|                             Bill Gates                       |");
+		pw.println("|                             1 Microsoft Way                  |");
+		pw.println("|                             Redmond, WA 98104                |");
+		pw.println("|                                                              |");
+		pw.println("+--------------------------------------------------------------+");
+		pw.close();
+	}
 }
