@@ -45,7 +45,7 @@ public class MadLibRandom
 		int ni2  = 0 + (int)(Math.random()* nouns.length       ); // singular noun 2
 		int bi   = 0 + (int)(Math.random()* bodyparts_pl.length); // body part (plural)
 		int vi2  = 0 + (int)(Math.random()* verbs_pt.length    ); // past-tense verb 2
-
+		int adv  = 0 + (int)(Math.random()* adverbs.length     );
 		String male     = males[mi];
 		String female   = females[fi];
 		String adj1     = adjectives[ai1];
@@ -57,10 +57,10 @@ public class MadLibRandom
 		String noun2    = nouns[ni2];
 		String bodypart = bodyparts_pl[bi];
 		String verb2    = verbs_pt[vi2];
-
+		String adverb1  = adverbs[adv];
 		System.out.printf("One afternoon %s and %s were walking down a(n) %s trail,\n", male, female, adj1);
 		System.out.printf("looking for kindling for their campfire. The trees were %s and\n", adj2 );
-		System.out.printf("green, and there were colorful wildflowers all around. %s and %s\n", male, female );
+		System.out.printf("%s, and there were colorful wildflowers all around. %s and %s\n", color, male, female );
 		System.out.printf("began to pick the wildflowers, and after a while, they %s so far\n", verb1 );
 		System.out.printf("that they had wandered away from the trail.\n\n" );
 
@@ -78,7 +78,7 @@ public class MadLibRandom
 		System.out.printf("%s said, \"%s, let's keep walking! There's no way I'm going into\n", male, female );
 		System.out.printf("that tower! It looks haunted!\"\n\n" );
 
-		System.out.printf("\"Don't be such a(n) %s! We're going in. I think it looks perfectly\n", noun2 );
+		System.out.printf("\"Don't be such a(n) %s! We're going in. I think it looks %s\n", noun2, adverb1 );
 		System.out.printf("un-haunted!\" said %s.\n\n", female );
 
 		System.out.printf("%s was so scared that he could not open his eyes. He felt his %s\n", male, bodypart );
