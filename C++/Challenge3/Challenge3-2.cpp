@@ -15,15 +15,14 @@ int main() {
             number /= 10;
  
             int temp = d;
-            for(int j = 1; j < 4; j++){
+            for(int j = 1; j < 5; j++){
                 temp *= d;
             }
             sumOfPowers += temp;
         }
  
         if (sumOfPowers == i) {
-            result += i;
+            cout << i << endl;
         }
     }
-    cout << result;
 }
