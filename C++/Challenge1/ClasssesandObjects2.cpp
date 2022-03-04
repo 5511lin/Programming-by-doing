@@ -39,10 +39,15 @@ class Triangle{
 };
 
 int main(){
-
-    Triangle pet(2,20.8);
-    pet.GetInfo();
-    return 0;
-
+    srand (time(NULL));
+    double area, side1, side2, side3;
+    int r1 = rand()%10+1;
+    int r2 = rand()%10+1;
+    int r3 = rand()%10+1;
+    int r4 = rand()%10+1;
+    int r5 = rand()%10+1;
+    int r6 = rand()%10+1;
+    triangle shape(r1, r2, r3, r4, r5, r6); 
+    cout<<"The triangle has sides of "<< shape.getSide1()<< " "<< shape.getSide2()<<" "<< shape.getSide3()<<" and an area of " << shape.getArea();
 
 };
