@@ -39,7 +39,7 @@ double distanceP(Plant a, Planet b){
 int main({
     Planet solarSystem[8] = {
         Planet("Mercury", 69.592, 0.33, 4879.4, 0, Moon("NO NOON",0,0,0), Moon("NO NOON",0,0,0)),
-        Planet("Jupiter", 745.39, 1998.13, 193820, 79, Moon("Io",421600,3629,893.2),Moon("Europa",670900,3126,480),Moon("Callisto",1883000,4800,1075)),
+        Planet("Jupiter", 745.39, 1998.13, 193820, 79, Moon("Io",421600,3629,893.2),Moon("Europa",670900,3126,480),Moon("Callisto",1883000,4800,1075))
     };
     cout<< "Distance are:= " <<distanceP(solarSystem[0],solarSystem[1]) <<endl;
     return 0;
