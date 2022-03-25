@@ -12,7 +12,7 @@ int calculate_sum(int a, int B, int N){
  
 //run
 int main(){
-    int a = 0, N = 100, B = 0;
+    int a = 0, N = 10000, B = 0;
     cout << "Input A: ";
     cin >> a;
     cout << endl << "Input B: ";
