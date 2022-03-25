@@ -1,4 +1,3 @@
-//Sorting SortingArray 100pts Julian Lin
 #include <iostream>
 using namespace std;
  
