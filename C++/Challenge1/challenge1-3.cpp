@@ -19,7 +19,7 @@ int main(){
     cin >> B;
 
     cout << "Sum of multiples of "
-         << a << " and " << B << " up to " << N << " = "
+         << a << " and " << B << " up to 100 = "
          << calculate_sum(a, B, N) << endl;
     return 0;
 }
