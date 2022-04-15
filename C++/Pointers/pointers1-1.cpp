@@ -1,4 +1,3 @@
-
 #include <iostream>
 
 #include <string>
@@ -8,6 +7,7 @@ using namespace std;
 void sayHello(string name){
     cout<<"Hello "<<name;
 }
+//create a 
 void sayHi(string &name){
     cout<<"Hi "<<name;
 }
