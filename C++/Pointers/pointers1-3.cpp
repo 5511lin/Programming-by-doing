@@ -1,6 +1,4 @@
-//includes the essential things that we use like cout <<
 #include <iostream>
-//makes it so that we don't have to type std:: before every command
 using namespace std;
 
 //creates an integer M that is 3
@@ -9,7 +7,6 @@ const int M = 3;
 const int N = 3;
 
 //creates a function printArr with parameters value of an array and size of an arr (both integers)
-//when the function is called it will basically return the value in the slot that is requested
 void printArr(int *array, int sizeArr){
     //loops through the loop for (the size of the array) amount of times
     for(int i=0;i<sizeArr;i++)
