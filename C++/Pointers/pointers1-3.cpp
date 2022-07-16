@@ -14,10 +14,8 @@ void printArr(int *array, int sizeArr){
     cout<<*(array+i)<<endl;
 }
 
-//sets up a function called print2D which requests for a 2d array and its sizes on both axes
+//create a function called print2D which requests for a 2d array and its sizes on both axes
 void print2D(int arr[M][N]){
-    //basically this nested loop will go through eveyr single slot in the 2d array (it will print out the j rows first then move on to the next j row for i amount of times)
-    //outer loop loops M times
     for (int i = 0; i < M; i++){
     //inner loops loops N times
       for (int j = 0; j < N; j++){
@@ -27,7 +25,7 @@ void print2D(int arr[M][N]){
     }
 }
 
-//sets up a function that asks for the pointer that points to the value of an int arr and asks for in r and int c
+//create a function that asks for the pointer that points to the value of an int arr and asks for in r and int c
 void print2DP(int *arr, int r, int c){
     //the result of this will print out the same thing as the previous function, except this time the pointer's variable will point to the size of the array, so it can't just ask for arr[M][N] like last time
     //the outer loop loops for r amount of times (which is gonna be the "i" size of the array from the previous function, judging by what is going to be inputted later)
@@ -47,11 +45,11 @@ int main()
     //calls the function from before, uses a pointer that points to the address of arr[0], which in the fucntion will decide how many times it loops
     //you use the pointer to point at the address at the 0th slot of the array to make the function print out the value of that slot (because the function uses * instead of &)
     printArr(&arr[0],6);
-    //sets up a 2d array with sizes 3 and 3
+    //sets up an array with sizes 3 and 3
     int arr2[3][3]={{1,2,3},{4,5,6},{7,8,9}};
     //prints the array normally without using any pointers that point to their values or addresses
     print2D(arr2);
-    cout<<endl;//endl so the thing stays organized
+    cout<<endl;
     //it calls the function and gives the address of arr2's slots 0 and 0 so eventually the function will print out the value of each of the slots one by one
     print2DP(&arr2[0][0],3,3);
     return 0;

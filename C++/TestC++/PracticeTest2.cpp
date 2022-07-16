@@ -1,173 +1,277 @@
-//1 print using cout
-#include <iostream> 
+#include <iostream>
+#include <vector>
 using namespace std;
-int main()
-{
-    cout <<"1 3 5 \n7 9 11\n13 15 17";
+void method1() {
+//printing out one by one
+    cout << "1 ";
+    cout << "2 ";
+    cout << "3 " << endl;
+    cout << "4 ";
+    cout << "5 ";
+    cout << "6 " << endl;
+    cout << "7 ";
+    cout << "8 ";
+    cout << "9 " << endl;
 }
 
-//2 print by with int variable
-#include <iostream>
-using namespace std;
-int main() {
-int num1 = 1, num2 = 3, num3 = 5, num4 = 7, num5 = 9, num6 = 11, num7 = 13, num8 = 15, num9 = 17;
-cout<<num1<<" "<<num2<<" "<<num3<<endl;
-cout<<num4<<" "<<num5<<" "<<num6<<endl;
-cout<<num7<<" "<<num8<<" "<<num9<<endl;
-}
-
-//3 print with Array
-#include <iostream>
-using namespace std;
-int Array[9]= {1, 3, 5, 7, 9, 11, 13, 15, 17};
-int main(){
-   cout<< Array[0]<<" ";
-   cout<< Array[1]<<" ";
-   cout<< Array[2]<<" "<<endl;
-   cout<< Array[3]<<" ";
-   cout<< Array[4]<<" ";
-   cout<< Array[5]<<" "<<endl;
-   cout<< Array[6]<<" ";
-   cout<< Array[7]<<" ";
-   cout<< Array[8]<<" ";
-}
-
-//4 print using for function
-#include <iostream>
-using namespace std;
-
-int main(){
-    int number = 1;
-    for( int i = 0 ; i < 9 ; i++ ){
-        if (i==2 || i==5){
-            cout << ( number + i * 2 )<<endl;
-        }
-        else {
-            cout << ( number + i * 2 )<<" ";
-        }
-    }
-}
-
-//5 print using matrix
-#include <iostream>
-#include <algorithm>
-using namespace std;
-
-int main()
-{
-    const int m = 3, n=3;
-    int mat[m][n] = {
-        {1, 3, 5},
-        {7, 9, 11},
-        {13, 15, 17}
-    };
-    for (auto &row: mat) {
-        for (auto &i: row) {
-            cout <<i<< ' ';
+void method2() {
+//printing out with a 2 for loop
+    for(int i = 0; i <= 2; i++) {
+        for(int j = 1; j <= 3; j++) {
+            cout << j+(i*3) << " ";
         }
         cout << endl;
     }
-    return 0;
 }
 
-//6 print using if function
-#include<iostream>
-using namespace std;
-int main(){
-int two=2;
-    if (two != 3)
-    {
-        cout<< '\n';
-        cout<< '\n';
-        cout <<"1 3 5 "<< '\n' << + "7 9 11 " << '\n' << + "13 15 17";//second way using if
-        cout<<endl;
-        cout<<endl;
-
-    }
-}
-
-//7 print using matrix
-#include<studio.h>
-
-int main(){
-    int m=3, n=3;
-    int a[3*3] = {1, 3, 5, 7, 9, 11, 13, 15, 17};
-    int *ptr = a;
-    for(int i=0;i<m;i++){
-        for(intj=0;j<n;j++)
-        printf("%d ", *(ptr + (n*i+j)));
-        printf("\n");
-    }
-    return 0;
-}
-
-//8
-#include<iostream>
-using namespace std;
-int main(){
-for (int i=0, i<=15, i+2)
-{
-    cout i;
-}
-}
-
-//9
-#include <iostream>
-using namespace std;
-int main()
-{
-    cout<<"1 ";
-       for(int j=1; j<=8; j++)
-       {
-           if (j==2 || j==5){
-            cout << ( 2*j +1 )<<endl;
+void method3() {
+//printing out with for loop + if statement
+    for(int i = 1; i < 10; i++) {
+        cout << i << " ";
+        if(i%3 == 0) {
+            cout << endl;
         }
-        else {
-            cout << ( 2*j +1 )<<" ";
+    }
+}
+
+void method4() {
+//printing out in 1 line 
+    cout << "1" << " 2" << " 3" << "\n" << "4" << " 5" << " 6" << "\n" << "7" << " 8" << " 9";
+}
+void method5() {
+//printing out with for loop + if statement + array
+
+    int a[9] = {1,2,3,4,5,6,7,8,9};
+    for(int i = 0; i < 9; i++) {
+        cout << a[i] << " ";
+        if((i+1)%3 == 0) {
+            cout << endl;
         }
-       }
-       cout<<endl;
-   return 0;
-}
-
-//10
-#include <iostream>
-using namespace std;
-int main()
-{
-    int one = 1; 
-    if (one != 1)
-    {
-        cout <<"1 3 5 \n7 9 11\n13 15 17";
-    }
-    else 
-    {
-        cout <<"1 3 5 \n7 9 11\n13 15 17";
     }
 }
+void method6() {
+//printing out with nested loop + array
 
-//11 vector
-#include <vector>
-#include <iostream>
-using namespace std;
-void print(vector <int> const &a) {
-    for(int count = 0; count < 3; count++){
-        cout << a.at(count) << ' ';
+    int a[9] = {1,2,3,4,5,6,7,8,9};
+    for(int i = 0; i <= 2; i++) {
+        for(int j = 0; j <= 2; j++) {
+            cout << a[j+(i*3)] << " ";
+        }
+        cout << endl;
+    }
+}
+void method7() {
+//printing out with nested loop + a blank array
+
+    int a[9];
+    for(int i=1; i<=9; i++) {
+        a[i-1] = i;
+    }
+    for(int i = 0; i <= 2; i++) {
+        for(int j = 0; j <= 2; j++) {
+            cout << a[j+(i*3)] << " ";
+        }
+        cout << endl;
+    }
+}
+void method8() {
+//printing out with array + cout manually
+    int arr[9] = {1,2,3,4,5,6,7,8,9};
+    cout<<arr[0]<<arr[1]<<arr[2]<<endl;
+    cout<<arr[3]<<arr[4]<<arr[5]<<endl;
+    cout<<arr[6]<<arr[7]<<arr[8]<<endl;
+}
+void method9() {
+//printing out with variables that alter as the forloop goes
+    int i2 = 2;
+    int i3 = 3;
+    for(int i = 1; i < 10; i += 3){
+        cout << i << " " << i2 << " " << i3 << endl;
+        i2 += 3;
+        i3 += 3;
+    }
+}
+void method10() {
+//vector 
+    vector<int> a = {1,2,3,4,5,6,7,8,9};
+    for(int c = 0; c < 3; c++){
+        cout << a.at(c) << ' ';
     }
     cout << endl;
-    for(int count = 3; count < 6; count++){
-           cout << a.at(count) << ' ';
+    for(int c = 3; c < 6; c++){
+           cout << a.at(c) << ' ';
     }
     cout << endl;
-    for(int count = 6; count < 9; count++){
-        cout << a.at(count) << ' ';
+    for(int c = 6; c < 9; c++){
+        cout << a.at(c) << ' ';
     }
 }
- 
-int main() {
-   vector<int> a = {1,2,3,4,5,6,7,8,9};
-   print(a);
-   return 0;
+void method11() {
+//for loop but numbers are negative 
+    for(int i = -1; i >= -9; i--) {
+        cout << abs(i) << " ";
+        if(i%3 == 0) {
+            cout << endl;
+        }
+    }
+}
+void method12() {
+//2D Array + forloop
+    int a[3][3] = {
+        {1,2,3},
+        {4,5,6},
+        {7,8,9}
+    };
+    for(int i=0; i<3; i++) {
+        for(int j=0; j<3; j++) {
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+void method13() {
+//while loop
+    int i=1;
+    while(i<10) {
+        cout << i << " ";
+        if(i%3 == 0) {
+            cout << endl;
+        }
+        i++;
+    }
+}
+void method14() {
+//do while
+    int i=1;
+    do {
+        cout << i << " ";
+        if(i%3 == 0) {
+            cout << endl;
+        }
+        i++;
+    }while(i<10);
+}
+void method15() {
+//while with pointers
+    int i=1;
+    int *j = &i;
+    while(i<10) {
+        cout << *j << " ";
+        if(i%3 == 0) {
+            cout << endl;
+        }
+        i++;
+        j = &i;
+    }
+}
+void method16(int i) {
+//Recursion
+    if(i < 10) {
+        cout << i << " ";
+        if(i%3 == 0) {
+            cout << endl;
+        }
+        i++;
+        method16(i);
+    }
+}
+void method17() {
+//switch
+    for(int i=1; i<10; i++) {
+        switch (i) {
+            case 1:
+                cout << "1 ";
+                break;
+            case 2:
+                cout << "2 ";
+                break;
+            case 3:
+                cout << "3" << endl;
+                break;
+            case 4:
+                cout << "4 ";
+                break;
+            case 5:
+                cout << "5 ";
+                break;
+            case 6:
+                cout << "6" << endl;
+                break;
+            case 7:
+                cout << "7 ";
+                break;
+            case 8:
+                cout << "8 ";
+                break;
+            case 9:
+                cout << "9";
+                break;
+        }     
+    }
+}
+void method18() {
+//nested while loop + dowhile loop
+    int count = 1;
+    int i = 0;
+    while(i <3){
+        int j = 0;
+        do{
+            cout<<count<<" ";
+            count++;
+            j++;
+        }while(j<3);
+    cout << endl;
+    i++;
+    }
+}
+void method19() {
+    //2D Array made by array 
+    int arr1[3] = {1,2,3}, arr2[3] = {4,5,6}, arr3[3] = {7,8,9};;
+    int a[3][3] = {
+        {arr1[0], arr1[1], arr1[2]},
+        {arr2[0], arr2[1], arr2[2]},
+        {arr3[0], arr3[1], arr3[2]},
 
-
-//12
+    };
+    for(int i=0; i<3; i++) {
+        for(int j=0; j<3; j++) {
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+void method20() {
+//structure
+    struct {
+        int n;
+    } myStructure;
+    for(myStructure.n = 1; myStructure.n < 10; myStructure.n++) {
+        cout << myStructure.n << " ";
+        if(myStructure.n%3 == 0) {
+            cout << endl;
+        }
+    }
+}
+int main()
+{
+    method1();
+    method2(); 
+    method3(); 
+    method4(); 
+    method5(); 
+    method6(); 
+    method7(); 
+    method8(); 
+    method9(); 
+    method10(); 
+    method11(); 
+    method12(); 
+    method13(); 
+    method14(); 
+    method15(); 
+    method16(1);
+    method17(); 
+    method18(); 
+    method19(); 
+    method20();
+}

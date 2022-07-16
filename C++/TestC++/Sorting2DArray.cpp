@@ -1,31 +1,71 @@
 #include <iostream>
-#include <ctime>
-using namespace std;
+#include <algorithm>
+using  namespace std;
 
-int main (){
-    int n;
-    int m;
+int main(){
+     int temp; int numColumns; int numRows;
+     
+    srand(unsigned(NULL));
+    // int AR[4][4] = {{41,12,33,14},{15,46,17,68},{59,11,17,22},{23,44,65,66}};
+    
 
-    cout << "Welcome to the Alphabet Sorter!\nEnter Size (enter 0 0 to exit):"<<endl;
-    cin >> n; cin >> m; 
-    char arr[n][m];
-    //char alph [] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
-
-    char c;
-    int r;
+    cout<<"Number of columns: "<<endl;
+    cin>>numColumns;
+    cout<<"Number of rows: "<<endl;
+    cin>>numRows;
+    int AR[numRows][numColumns];
 
 
-
-    cout << "Generated Array: " << endl;
-    srand (time(NULL));
-    for (int i=0;  i < n; i++) {    
-        for (int j = 0; j < m; j++){
-            r = rand() % 26;
-            c = 'a' + r; 
-            arr [i][j] = c;
-            cout << arr [i][j] << " ";
-        }
-        cout << endl;
+    cout<<"Array before sorting!"<<endl;
+    for(int i=0; i<numRows; i++){
+        for(int j=0; j<numColumns; j++){
+            AR[i][j] = rand()%26+97;
+            cout<<char(AR[i][j]) << " ";
+            }
+            cout<<endl;
     }
-    return 0;
+
+    for(int k=0; k<numRows*numColumns; k++){
+        for(int l=0; l<numColumns-1; l++){
+            for(int m=0; m<numColumns-1; m++){
+                if(AR[l][m] > AR[l][m+1]){
+                    temp = AR[l][m];
+                    AR[l][m] = AR[l][m+1];
+                    AR[l][m+1] = temp;
+                 }
+            }
+        }
+        for(int o=0; o<numColumns; o++)
+        {
+            for(int p=0; p<numRows-1; p++){
+                if(o%2==0){
+                    if(AR[p][o]<AR[p+1][o]){
+                        temp = AR[p][o];
+                        AR[p][o] = AR[p+1][o];
+                        AR[p+1][o] = temp;
+                    }
+                }else{
+                    if(AR[p][o]>AR[p+1][o]){
+                        temp = AR[p][o];
+                        AR[p][o] = AR[p+1][o];
+                        AR[p+1][o] = temp;
+                    }
+                }
+            }
+        }
+    }
+    cout<<"Array after sorting by rows!"<<endl;
+    for(int i=0; i<numRows; i++){
+        for(int j=0; j<numColumns; j++){
+            cout<<char(AR[i][j]) << " ";
+            }
+            cout<<endl;
+    }
+    cout<<"Array after reversed"<<endl;
+    for(int k=numRows; k>1; k--){
+            cout<<endl;
+        for(int u=numColumns; u>1; u--){
+            cout<<char(AR[k][u])<<" ";
+        }
+    }
 }
